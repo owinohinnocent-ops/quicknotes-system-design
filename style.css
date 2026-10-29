@@ -1,0 +1,199 @@
+
+/* QuickNotes - application styling */
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f3f6fb;
+    font-synthesis: none;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.page-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 4px;
+    color: #174ea6;
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    margin-top: 0;
+    color: #5b6472;
+}
+
+.panel {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dce3ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(31, 41, 55, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c2d1;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1f2937;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 1px;
+    border-color: #2563eb;
+}
+
+textarea {
+    resize: vertical;
+}
+
+small {
+    color: #64748b;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #1d4ed8;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #1e40af;
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.notes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.notes-header h2 {
+    margin-bottom: 0;
+}
+
+#status {
+    padding: 10px 12px;
+    border-radius: 7px;
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+#notes-list {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    list-style: none;
+}
+
+.note-item {
+    padding: 16px;
+    border: 1px solid #dce3ed;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.note-item h3 {
+    margin: 0 0 8px;
+    color: #174ea6;
+}
+
+.note-item p {
+    white-space: pre-wrap;
+}
+
+.delete-btn {
+    background: #b42318;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background: #912018;
+}
+
+.empty-state {
+    padding: 16px;
+    color: #64748b;
+    text-align: center;
+}
+
+footer {
+    padding: 12px;
+    color: #64748b;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        padding-top: 20px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .notes-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
